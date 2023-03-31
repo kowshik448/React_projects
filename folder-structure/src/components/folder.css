@@ -1,0 +1,35 @@
+.main-root{
+    width: 300px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: rgb(231, 229, 229);
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.children{
+    margin-left: 15px;
+}
+
+.new-folder{
+    margin-left: 10px;
+}
+input{
+    width: 270px;
+    height: 20px;
+    padding: 5px;
+}
+button{
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid grey;
+    padding: 5px;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}

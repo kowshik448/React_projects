@@ -1,0 +1,57 @@
+* , *::before, *::after{
+    margin: 0;
+    padding: 0;
+
+}
+
+.grid-container{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns:repeat(4,80px) ;
+    grid-template-rows: minmax(80px,auto) repeat(5,80px);
+    justify-content: center; 
+}
+
+button{
+    cursor: pointer;
+    font-size: 25px;
+    border: 1px solid white;
+    outline:none;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+.grid-output{
+    grid-column:1/-1;
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previousOperand{
+    color: rgb(250, 233, 233,.75);
+    font-size: 18px;
+}
+
+.currentOperand{
+    color: white;
+    font-size: 25px;
+}
+
+.span-2{
+    grid-column: span 2;
+}
+
+.span-2.clear{
+    background-color: red;
+    color: white;
+}

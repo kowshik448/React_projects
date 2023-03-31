@@ -1,0 +1,100 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.clock-container{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background:radial-gradient(rgb(18, 165, 31),rgb(241, 201, 201),rgb(234, 247, 228));
+    border: 2px solid black;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow:  -8px 8px 15px rgba(225,225,225,0.05),
+                20px 20px 20px rgba(0,0,0,0.2),
+                inset -8px -8px 15px rgba(225,225,225,0.05),
+                inset 20px 20px 20px rgba(0,0,0,0.2);
+}
+
+.digit{
+    width: 100%;
+    height: 100%;
+    --rotation : 0;
+    position: absolute;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 20px;
+}
+
+.digit-1 div{transform: rotate(-30deg);}
+.digit-2 div{transform: rotate(-60deg);}
+.digit-3 div{transform: rotate(-90deg);}
+.digit-4 div{transform: rotate(-120deg);}
+.digit-5 div{transform: rotate(-150deg);}
+.digit-6 div{transform: rotate(-180deg);}
+.digit-7 div{transform: rotate(-210deg);}
+.digit-8 div{transform: rotate(-240deg);}
+.digit-9 div{transform: rotate(-270deg);}
+.digit-10 div{transform: rotate(-300deg);}
+.digit-11 div{transform: rotate(-330deg);}
+
+.digit-1{ --rotation:30deg;}
+.digit-2{ --rotation:60deg;}
+.digit-3{ --rotation:90deg;}
+.digit-4{ --rotation:120deg;}
+.digit-5{ --rotation:150deg;}
+.digit-6{ --rotation:180deg;}
+.digit-7{ --rotation:210deg;}
+.digit-8{ --rotation:240deg;}
+.digit-9{ --rotation:270deg;}
+.digit-10{ --rotation:300deg;}
+.digit-11{ --rotation:330deg;}
+
+.clock-container::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: rgb(245, 115, 212);
+    border-radius: 50%;
+    z-index:12;
+    top: 50%;
+    left: 50%;
+}
+
+.handle{
+    position: absolute;
+    bottom: 50%;
+    left:50%;
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+    background-color: rgb(19, 17, 18);
+    border: 1px solid grey;
+}
+
+.handle.hour{
+    width: 5px;
+    height:100px;
+    background-color: black;
+}
+.handle.min{
+    width: 3px;
+    height:110px;
+    background-color: rgb(238, 184, 67);
+}
+.handle.sec{
+    width: 1px;
+    height:125px;
+    background-color: cyan;
+}
